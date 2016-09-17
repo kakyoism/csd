@@ -90,6 +90,9 @@ class PythonScore(object):
                     line[pf] = func(line[pf], *args, **kwargs)
             self._score_list[i] = line
 
+    def write(self, *args):
+        self._score_list.append(args)
+
 class Cue(object):
 
     def __init__(self, parent):
